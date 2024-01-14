@@ -1,0 +1,25 @@
+body{
+	background-color: #e4e9fd;
+	background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+	min-height: 1000px;
+	font-family: sans-serif;
+}
+h1{
+	padding: 20px;
+}
+.box{
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 10px;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.box-table{
+	max-width: 1000px;
+	margin: 50px auto;
+	padding: 10px;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}

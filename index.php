@@ -64,33 +64,30 @@ if(isset($_GET['query']) && !empty($_GET['query'])){
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Demo App - Value SERP</title>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<h1 class="text-center">Search here and Get results!</h1><br>
+		<div>
+			<div class="box">
+				<h1 class="text-center">Search here and Get results!</h1>
 				<form name="searchForm" method="GET" autocomplete="off">
 					<div class="form-group">
 						<label>Enter Search Query (Use ( , ) for multiple search query)</label>
 						<input type="text" name="query" class="form-control" value="<?php echo (isset($_GET['query'])?$_GET['query']:'') ?>" placeholder="McDonald, Pizza, Burger">
-						<p id="err" style="color: red; font-size: 12pz;"></p>
+						<p id="err" style="color: red; font-size: 12px;"></p>
 					</div>
-					<div class="form-group">
+					<div class="btn-group" role="group">
 						<input type="submit" name="submit" class="btn btn-success" value="Get Result">
-					</div>
-					<div class="form-group">
 						<input type="submit" name="submit" class="btn btn-info" value="Export CSV">
-					</div>
-					<div class="form-group">
-						<a href="/index.php" class="btn btn-info">Reset</a>
+						<a href="/index.php" class="btn btn-danger">Reset</a>
 					</div>
 				</form>
 			</div>
-			<div class="row">
-			<?php if(isset($result)){
-				foreach($result as $res){
-				?>
+			<div class="box-table">
+				<?php if(isset($result)){
+					foreach($result as $res){
+					?>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
@@ -118,12 +115,12 @@ if(isset($_GET['query']) && !empty($_GET['query'])){
 						 } ?>
 						</tbody>
 					</table>
-				<?php
+					<?php
+					}
 				}
-			}
-			?>
+				?>
 			</div>
-		</div>	
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 		<script type="text/javascript">
