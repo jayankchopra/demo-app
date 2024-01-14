@@ -132,7 +132,7 @@ if(isset($_GET['query']) && !empty($_GET['query'])){
 					e.preventDefault();
 				}
 				if(format.test(qry)){
-					$('#err').show().html('Please enter valid search query, only (,) is allowed!');
+					$('#err').show().html('Please enter valid search query only (,) is allowed!');
 					e.preventDefault();
 				}
 				setTimeout(function(){ $('#err').fadeOut() }, 6000);
